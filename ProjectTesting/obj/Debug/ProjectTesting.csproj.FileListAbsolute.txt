@@ -1,0 +1,10 @@
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\bin\Debug\ProjectTesting.exe.config
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\bin\Debug\ProjectTesting.exe
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\bin\Debug\ProjectTesting.pdb
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.csprojResolveAssemblyReference.cache
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.Properties.Resources.resources
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.csproj.GenerateResource.Cache
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.exe
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.pdb
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.frmMain.resources
+E:\Kiểm thử PM\ProjectTesting\ProjectTesting\obj\Debug\ProjectTesting.frmMoSoTietKiem.resources
