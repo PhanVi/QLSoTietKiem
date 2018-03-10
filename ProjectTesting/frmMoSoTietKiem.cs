@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ProjectTesting
 {
     public partial class frmMoSoTietKiem : Form
     {
+        
         public frmMoSoTietKiem()
         {
             InitializeComponent();
+        }
+
+       
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            
         }
 
        
