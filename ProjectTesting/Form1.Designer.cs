@@ -94,6 +94,7 @@
             // 
             // mởSổTiếtKiệmToolStripMenuItem
             // 
+            this.mởSổTiếtKiệmToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
             this.mởSổTiếtKiệmToolStripMenuItem.Name = "mởSổTiếtKiệmToolStripMenuItem";
             this.mởSổTiếtKiệmToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.mởSổTiếtKiệmToolStripMenuItem.Text = "Mở sổ tiết kiệm";
@@ -135,6 +136,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Chương trình quản lý sổ tiết kiệm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

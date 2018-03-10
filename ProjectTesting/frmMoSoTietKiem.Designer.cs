@@ -46,14 +46,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbbCurrency = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txLaiXuat = new System.Windows.Forms.TextBox();
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.rbt1Nam = new System.Windows.Forms.RadioButton();
-            this.rbt3Thang = new System.Windows.Forms.RadioButton();
             this.txtMaSTK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
+            this.txtLoaiTien = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +89,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(103, 105);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(170, 20);
-            this.dtpNgaySinh.TabIndex = 8;
+            this.dtpNgaySinh.TabIndex = 3;
             // 
             // txtQuocTich
             // 
@@ -103,21 +103,21 @@
             this.txtEmail.Location = new System.Drawing.Point(349, 36);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(193, 20);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(349, 72);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(193, 20);
-            this.txtSDT.TabIndex = 7;
+            this.txtSDT.TabIndex = 6;
             // 
             // txtGioiTinh
             // 
             this.txtGioiTinh.Location = new System.Drawing.Point(103, 137);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(170, 20);
-            this.txtGioiTinh.TabIndex = 7;
+            this.txtGioiTinh.TabIndex = 4;
             // 
             // txtTen
             // 
@@ -125,21 +125,21 @@
             this.txtTen.Location = new System.Drawing.Point(204, 72);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(69, 20);
-            this.txtTen.TabIndex = 7;
+            this.txtTen.TabIndex = 2;
             // 
             // txtHo
             // 
             this.txtHo.Location = new System.Drawing.Point(103, 72);
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(95, 20);
-            this.txtHo.TabIndex = 7;
+            this.txtHo.TabIndex = 1;
             // 
             // txtMaKH
             // 
             this.txtMaKH.Location = new System.Drawing.Point(103, 36);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(170, 20);
-            this.txtMaKH.TabIndex = 7;
+            this.txtMaKH.TabIndex = 0;
             // 
             // label7
             // 
@@ -207,34 +207,42 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox2.Controls.Add(this.cbbCurrency);
+            this.groupBox2.Controls.Add(this.txtLoaiTien);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txLaiXuat);
             this.groupBox2.Controls.Add(this.txtSoTien);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.rbt1Nam);
-            this.groupBox2.Controls.Add(this.rbt3Thang);
             this.groupBox2.Controls.Add(this.txtMaSTK);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(0, 181);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(586, 144);
+            this.groupBox2.Size = new System.Drawing.Size(586, 115);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sổ tiết kiệm";
             // 
-            // cbbCurrency
+            // label10
             // 
-            this.cbbCurrency.FormattingEnabled = true;
-            this.cbbCurrency.Location = new System.Drawing.Point(501, 30);
-            this.cbbCurrency.Name = "cbbCurrency";
-            this.cbbCurrency.Size = new System.Drawing.Size(56, 21);
-            this.cbbCurrency.TabIndex = 5;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(50, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Lãi xuất:";
+            // 
+            // txLaiXuat
+            // 
+            this.txLaiXuat.Location = new System.Drawing.Point(103, 67);
+            this.txLaiXuat.Name = "txLaiXuat";
+            this.txLaiXuat.Size = new System.Drawing.Size(62, 20);
+            this.txLaiXuat.TabIndex = 3;
             // 
             // txtSoTien
             // 
             this.txtSoTien.Location = new System.Drawing.Point(349, 30);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(126, 20);
-            this.txtSoTien.TabIndex = 4;
+            this.txtSoTien.TabIndex = 1;
             // 
             // label9
             // 
@@ -245,34 +253,12 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Số tiền mở sổ:";
             // 
-            // rbt1Nam
-            // 
-            this.rbt1Nam.AutoSize = true;
-            this.rbt1Nam.Location = new System.Drawing.Point(183, 76);
-            this.rbt1Nam.Name = "rbt1Nam";
-            this.rbt1Nam.Size = new System.Drawing.Size(90, 17);
-            this.rbt1Nam.TabIndex = 2;
-            this.rbt1Nam.TabStop = true;
-            this.rbt1Nam.Text = "Kỳ hạn 1 năm";
-            this.rbt1Nam.UseVisualStyleBackColor = true;
-            // 
-            // rbt3Thang
-            // 
-            this.rbt3Thang.AutoSize = true;
-            this.rbt3Thang.Location = new System.Drawing.Point(50, 76);
-            this.rbt3Thang.Name = "rbt3Thang";
-            this.rbt3Thang.Size = new System.Drawing.Size(97, 17);
-            this.rbt3Thang.TabIndex = 2;
-            this.rbt3Thang.TabStop = true;
-            this.rbt3Thang.Text = "Kỳ hạn 3 tháng";
-            this.rbt3Thang.UseVisualStyleBackColor = true;
-            // 
             // txtMaSTK
             // 
             this.txtMaSTK.Location = new System.Drawing.Point(103, 32);
             this.txtMaSTK.Name = "txtMaSTK";
             this.txtMaSTK.Size = new System.Drawing.Size(133, 20);
-            this.txtMaSTK.TabIndex = 1;
+            this.txtMaSTK.TabIndex = 0;
             // 
             // label8
             // 
@@ -285,24 +271,34 @@
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(453, 340);
+            this.btnDangKy.BackColor = System.Drawing.Color.Tomato;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Location = new System.Drawing.Point(438, 302);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(104, 23);
-            this.btnDangKy.TabIndex = 6;
+            this.btnDangKy.Size = new System.Drawing.Size(104, 37);
+            this.btnDangKy.TabIndex = 0;
             this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
+            // txtLoaiTien
+            // 
+            this.txtLoaiTien.Location = new System.Drawing.Point(500, 32);
+            this.txtLoaiTien.Name = "txtLoaiTien";
+            this.txtLoaiTien.Size = new System.Drawing.Size(65, 20);
+            this.txtLoaiTien.TabIndex = 2;
             // 
             // frmMoSoTietKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 388);
+            this.ClientSize = new System.Drawing.Size(586, 354);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMoSoTietKiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -330,13 +326,13 @@
         private System.Windows.Forms.TextBox txtHo;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cbbCurrency;
         private System.Windows.Forms.TextBox txtSoTien;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton rbt1Nam;
-        private System.Windows.Forms.RadioButton rbt3Thang;
         private System.Windows.Forms.TextBox txtMaSTK;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txLaiXuat;
+        private System.Windows.Forms.TextBox txtLoaiTien;
     }
 }
