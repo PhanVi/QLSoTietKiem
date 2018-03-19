@@ -44,6 +44,7 @@ namespace ProjectTesting
                 cmd = new SqlCommand(sql2, cnn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Đăng ký thành công!");
+                init();
                 cnn.Close();
             }
             catch (Exception ex)
@@ -52,6 +53,26 @@ namespace ProjectTesting
                 //throw;
             }
             
+        }
+
+        private void init()
+        {
+            txtMaKH.Text = "";
+            txtHo.Text = "";
+            txtTen.Text = "";
+            txtSDT.Text = "";
+            txtQuocTich.Text = "";
+            dtpNgaySinh.Text = "";
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            init();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }           
         }
     }
 }

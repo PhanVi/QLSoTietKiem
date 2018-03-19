@@ -28,3 +28,4 @@ E:\Kiểm thử PM\QLSoTietKiem-master\ProjectTesting\obj\Debug\ProjectTesting.f
 E:\Kiểm thử PM\QLSoTietKiem-master\ProjectTesting\obj\Debug\ProjectTesting.frmMoSoTietKiem.resources
 E:\Kiểm thử PM\QLSoTietKiem-master\ProjectTesting\obj\Debug\ProjectTesting.Properties.Resources.resources
 E:\Kiểm thử PM\QLSoTietKiem-master\ProjectTesting\obj\Debug\ProjectTesting.csproj.GenerateResource.Cache
+E:\Kiểm thử PM\QLSoTietKiem-master\ProjectTesting\obj\Debug\ProjectTesting.frmKhachHang.resources

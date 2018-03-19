@@ -32,12 +32,13 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sổTiếtKiệmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mởSổTiếtKiệmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phiếuGửiTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phiếuRútTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSoTietKiem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMoSoTietKiem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThongTinKH = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPhieuGui = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPhieuRut = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThoat = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,58 +73,70 @@
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.DarkOrange;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sổTiếtKiệmToolStripMenuItem,
-            this.phiếuGửiTiềnToolStripMenuItem,
-            this.phiếuRútTiềnToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
-            this.thoátToolStripMenuItem});
+            this.menuSoTietKiem,
+            this.menuPhieuGui,
+            this.menuPhieuRut,
+            this.menuThongKe,
+            this.menuThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(546, 47);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // sổTiếtKiệmToolStripMenuItem
+            // menuSoTietKiem
             // 
-            this.sổTiếtKiệmToolStripMenuItem.BackColor = System.Drawing.Color.SandyBrown;
-            this.sổTiếtKiệmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mởSổTiếtKiệmToolStripMenuItem});
-            this.sổTiếtKiệmToolStripMenuItem.Name = "sổTiếtKiệmToolStripMenuItem";
-            this.sổTiếtKiệmToolStripMenuItem.Size = new System.Drawing.Size(81, 43);
-            this.sổTiếtKiệmToolStripMenuItem.Text = "Sổ tiết kiệm";
+            this.menuSoTietKiem.BackColor = System.Drawing.Color.SandyBrown;
+            this.menuSoTietKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMoSoTietKiem,
+            this.menuThongTinKH});
+            this.menuSoTietKiem.Name = "menuSoTietKiem";
+            this.menuSoTietKiem.Size = new System.Drawing.Size(81, 43);
+            this.menuSoTietKiem.Text = "Sổ tiết kiệm";
             // 
-            // mởSổTiếtKiệmToolStripMenuItem
+            // menuMoSoTietKiem
             // 
-            this.mởSổTiếtKiệmToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
-            this.mởSổTiếtKiệmToolStripMenuItem.Name = "mởSổTiếtKiệmToolStripMenuItem";
-            this.mởSổTiếtKiệmToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.mởSổTiếtKiệmToolStripMenuItem.Text = "Mở sổ tiết kiệm";
-            this.mởSổTiếtKiệmToolStripMenuItem.Click += new System.EventHandler(this.mởSổTiếtKiệmToolStripMenuItem_Click);
+            this.menuMoSoTietKiem.BackColor = System.Drawing.Color.Orange;
+            this.menuMoSoTietKiem.Name = "menuMoSoTietKiem";
+            this.menuMoSoTietKiem.Size = new System.Drawing.Size(197, 22);
+            this.menuMoSoTietKiem.Text = "Mở sổ tiết kiệm";
+            this.menuMoSoTietKiem.Click += new System.EventHandler(this.menuMoSoTietKiem_Click);
             // 
-            // phiếuGửiTiềnToolStripMenuItem
+            // menuThongTinKH
             // 
-            this.phiếuGửiTiềnToolStripMenuItem.Name = "phiếuGửiTiềnToolStripMenuItem";
-            this.phiếuGửiTiềnToolStripMenuItem.Size = new System.Drawing.Size(92, 43);
-            this.phiếuGửiTiềnToolStripMenuItem.Text = "Phiếu gửi tiền";
+            this.menuThongTinKH.BackColor = System.Drawing.Color.Orange;
+            this.menuThongTinKH.Name = "menuThongTinKH";
+            this.menuThongTinKH.Size = new System.Drawing.Size(197, 22);
+            this.menuThongTinKH.Text = "Thông Tin Khách Hàng";
+            this.menuThongTinKH.Click += new System.EventHandler(this.menuThongTinKH_Click_1);
             // 
-            // phiếuRútTiềnToolStripMenuItem
+            // menuPhieuGui
             // 
-            this.phiếuRútTiềnToolStripMenuItem.Name = "phiếuRútTiềnToolStripMenuItem";
-            this.phiếuRútTiềnToolStripMenuItem.Size = new System.Drawing.Size(90, 43);
-            this.phiếuRútTiềnToolStripMenuItem.Text = "Phiếu rút tiền";
+            this.menuPhieuGui.Name = "menuPhieuGui";
+            this.menuPhieuGui.Size = new System.Drawing.Size(92, 43);
+            this.menuPhieuGui.Text = "Phiếu gửi tiền";
+            this.menuPhieuGui.Click += new System.EventHandler(this.menuPhieuGui_Click);
             // 
-            // thốngKêToolStripMenuItem
+            // menuPhieuRut
             // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 43);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.menuPhieuRut.Name = "menuPhieuRut";
+            this.menuPhieuRut.Size = new System.Drawing.Size(90, 43);
+            this.menuPhieuRut.Text = "Phiếu rút tiền";
+            this.menuPhieuRut.Click += new System.EventHandler(this.menuPhieuRut_Click);
             // 
-            // thoátToolStripMenuItem
+            // menuThongKe
             // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(50, 43);
-            this.thoátToolStripMenuItem.Text = "Thoát";
-            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
+            this.menuThongKe.Name = "menuThongKe";
+            this.menuThongKe.Size = new System.Drawing.Size(69, 43);
+            this.menuThongKe.Text = "Thống kê";
+            this.menuThongKe.Click += new System.EventHandler(this.menuThongKe_Click);
+            // 
+            // menuThoat
+            // 
+            this.menuThoat.Name = "menuThoat";
+            this.menuThoat.Size = new System.Drawing.Size(50, 43);
+            this.menuThoat.Text = "Thoát";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click_1);
             // 
             // frmMain
             // 
@@ -150,12 +163,13 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sổTiếtKiệmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mởSổTiếtKiệmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuGửiTiềnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuRútTiềnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuSoTietKiem;
+        private System.Windows.Forms.ToolStripMenuItem menuMoSoTietKiem;
+        private System.Windows.Forms.ToolStripMenuItem menuPhieuGui;
+        private System.Windows.Forms.ToolStripMenuItem menuThongKe;
+        private System.Windows.Forms.ToolStripMenuItem menuThoat;
+        private System.Windows.Forms.ToolStripMenuItem menuThongTinKH;
+        private System.Windows.Forms.ToolStripMenuItem menuPhieuRut;
     }
 }
 

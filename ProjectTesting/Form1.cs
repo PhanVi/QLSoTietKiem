@@ -16,16 +16,38 @@ namespace ProjectTesting
         {
             InitializeComponent();
         }
+   
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuThongTinKH_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            frmKhachHang formKH = new frmKhachHang();
+            formKH.ShowDialog();
         }
 
-        private void mởSổTiếtKiệmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuMoSoTietKiem_Click(object sender, EventArgs e)
         {
-            frmMoSoTietKiem form1 = new frmMoSoTietKiem();
-            form1.ShowDialog();
+            frmMoSoTietKiem formMo = new frmMoSoTietKiem();
+            formMo.ShowDialog();
+        }
+
+        private void menuPhieuRut_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chưa làm");
+        }
+
+        private void menuPhieuGui_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cũng chưa làm");
+        }
+
+        private void menuThongKe_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Càngchưa làm");
+        }
+
+        private void menuThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

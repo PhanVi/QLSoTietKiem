@@ -45,9 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLoaiTien = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbKyHan = new System.Windows.Forms.ComboBox();
-            this.txtLoaiTien = new System.Windows.Forms.TextBox();
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txLaiSuat = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.txtMaSTK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -206,9 +207,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox2.Controls.Add(this.txtLoaiTien);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.cbKyHan);
-            this.groupBox2.Controls.Add(this.txtLoaiTien);
             this.groupBox2.Controls.Add(this.txtSoTien);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txLaiSuat);
@@ -222,6 +223,18 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sổ tiết kiệm";
+            // 
+            // txtLoaiTien
+            // 
+            this.txtLoaiTien.FormattingEnabled = true;
+            this.txtLoaiTien.Items.AddRange(new object[] {
+            "VND",
+            "USD"});
+            this.txtLoaiTien.Location = new System.Drawing.Point(483, 32);
+            this.txtLoaiTien.Name = "txtLoaiTien";
+            this.txtLoaiTien.Size = new System.Drawing.Size(59, 21);
+            this.txtLoaiTien.TabIndex = 12;
+            this.txtLoaiTien.Text = "VND";
             // 
             // label11
             // 
@@ -250,19 +263,11 @@
             this.cbKyHan.TabIndex = 10;
             this.cbKyHan.Text = "Không kỳ hạn";
             // 
-            // txtLoaiTien
-            // 
-            this.txtLoaiTien.AccessibleDescription = "";
-            this.txtLoaiTien.Location = new System.Drawing.Point(449, 32);
-            this.txtLoaiTien.Name = "txtLoaiTien";
-            this.txtLoaiTien.Size = new System.Drawing.Size(69, 20);
-            this.txtLoaiTien.TabIndex = 9;
-            // 
             // txtSoTien
             // 
             this.txtSoTien.Location = new System.Drawing.Point(349, 32);
             this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Size = new System.Drawing.Size(95, 20);
+            this.txtSoTien.Size = new System.Drawing.Size(128, 20);
             this.txtSoTien.TabIndex = 8;
             // 
             // label10
@@ -318,11 +323,24 @@
             this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.Tomato;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Location = new System.Drawing.Point(305, 302);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(104, 37);
+            this.btnHuy.TabIndex = 2;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // frmMoSoTietKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 354);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -359,11 +377,12 @@
         private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txLaiSuat;
-        private System.Windows.Forms.TextBox txtLoaiTien;
         private System.Windows.Forms.TextBox txtSoTien;
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbKyHan;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.ComboBox txtLoaiTien;
     }
 }
