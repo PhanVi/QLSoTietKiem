@@ -32,12 +32,17 @@ namespace ProjectTesting
 
         private void menuPhieuRut_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chưa làm");
+            //MessageBox.Show("Chưa làm");
+            frmPhieuRut formRut = new frmPhieuRut();
+            formRut.ShowDialog();
+
         }
 
         private void menuPhieuGui_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cũng chưa làm");
+            //MessageBox.Show("Chưa làm");
+            frmPhieuGui formGui = new frmPhieuGui();
+            formGui.ShowDialog();
         }
 
         private void menuThongKe_Click(object sender, EventArgs e)

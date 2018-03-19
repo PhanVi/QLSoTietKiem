@@ -91,7 +91,7 @@
             this.radNu.Location = new System.Drawing.Point(402, 110);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
-            this.radNu.TabIndex = 9;
+            this.radNu.TabIndex = 7;
             this.radNu.Text = "Nu";
             this.radNu.UseVisualStyleBackColor = true;
             // 
@@ -102,7 +102,7 @@
             this.radNam.Location = new System.Drawing.Point(349, 110);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(47, 17);
-            this.radNam.TabIndex = 8;
+            this.radNam.TabIndex = 6;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
@@ -119,14 +119,14 @@
             this.txtQuocTich.Location = new System.Drawing.Point(349, 71);
             this.txtQuocTich.Name = "txtQuocTich";
             this.txtQuocTich.Size = new System.Drawing.Size(193, 20);
-            this.txtQuocTich.TabIndex = 7;
+            this.txtQuocTich.TabIndex = 5;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(349, 36);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(193, 20);
-            this.txtSDT.TabIndex = 6;
+            this.txtSDT.TabIndex = 4;
             // 
             // txtTen
             // 
@@ -233,7 +233,7 @@
             this.txtLoaiTien.Location = new System.Drawing.Point(483, 32);
             this.txtLoaiTien.Name = "txtLoaiTien";
             this.txtLoaiTien.Size = new System.Drawing.Size(59, 21);
-            this.txtLoaiTien.TabIndex = 12;
+            this.txtLoaiTien.TabIndex = 2;
             this.txtLoaiTien.Text = "VND";
             // 
             // label11
@@ -260,7 +260,7 @@
             this.cbKyHan.Location = new System.Drawing.Point(349, 67);
             this.cbKyHan.Name = "cbKyHan";
             this.cbKyHan.Size = new System.Drawing.Size(121, 21);
-            this.cbKyHan.TabIndex = 10;
+            this.cbKyHan.TabIndex = 4;
             this.cbKyHan.Text = "Không kỳ hạn";
             // 
             // txtSoTien
@@ -268,7 +268,7 @@
             this.txtSoTien.Location = new System.Drawing.Point(349, 32);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(128, 20);
-            this.txtSoTien.TabIndex = 8;
+            this.txtSoTien.TabIndex = 1;
             // 
             // label10
             // 
@@ -330,7 +330,7 @@
             this.btnHuy.Location = new System.Drawing.Point(305, 302);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(104, 37);
-            this.btnHuy.TabIndex = 2;
+            this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);

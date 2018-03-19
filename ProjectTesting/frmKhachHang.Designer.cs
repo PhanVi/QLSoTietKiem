@@ -43,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -173,23 +172,11 @@
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.Tomato;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(240, 102);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 34);
-            this.btnXoa.TabIndex = 23;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.Tomato;
             this.btnReset.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(333, 102);
+            this.btnReset.Location = new System.Drawing.Point(241, 102);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(78, 34);
             this.btnReset.TabIndex = 23;
@@ -232,7 +219,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.dtpNgaySinh);
@@ -274,7 +260,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label5;

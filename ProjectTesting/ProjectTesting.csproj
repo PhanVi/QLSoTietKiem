@@ -64,6 +64,18 @@
     <Compile Include="frmMoSoTietKiem.Designer.cs">
       <DependentUpon>frmMoSoTietKiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuGui.Designer.cs">
+      <DependentUpon>frmPhieuGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuRut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuRut.Designer.cs">
+      <DependentUpon>frmPhieuRut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +86,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMoSoTietKiem.resx">
       <DependentUpon>frmMoSoTietKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuGui.resx">
+      <DependentUpon>frmPhieuGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuRut.resx">
+      <DependentUpon>frmPhieuRut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
