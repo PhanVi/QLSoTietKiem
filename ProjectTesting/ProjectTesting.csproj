@@ -76,8 +76,12 @@
     <Compile Include="frmPhieuRut.Designer.cs">
       <DependentUpon>frmPhieuRut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\connection.cs" />
+    <Compile Include="Functions\KhachHang.cs" />
+    <Compile Include="Functions\SoTietKiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UseFunctions\useKhachHang.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +126,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

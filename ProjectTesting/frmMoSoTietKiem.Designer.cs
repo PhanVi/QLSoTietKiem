@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMoSoTietKiem));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radNu = new System.Windows.Forms.RadioButton();
-            this.radNam = new System.Windows.Forms.RadioButton();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtQuocTich = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -56,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -63,13 +62,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox1.Controls.Add(this.radNu);
-            this.groupBox1.Controls.Add(this.radNam);
             this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.txtQuocTich);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtHo);
+            this.groupBox1.Controls.Add(this.txtGioiTinh);
             this.groupBox1.Controls.Add(this.txtMaKH);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -84,28 +82,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm thông tin khách hàng";
-            // 
-            // radNu
-            // 
-            this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(402, 110);
-            this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(39, 17);
-            this.radNu.TabIndex = 7;
-            this.radNu.Text = "Nu";
-            this.radNu.UseVisualStyleBackColor = true;
-            // 
-            // radNam
-            // 
-            this.radNam.AutoSize = true;
-            this.radNam.Checked = true;
-            this.radNam.Location = new System.Drawing.Point(349, 110);
-            this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(47, 17);
-            this.radNam.TabIndex = 6;
-            this.radNam.TabStop = true;
-            this.radNam.Text = "Nam";
-            this.radNam.UseVisualStyleBackColor = true;
             // 
             // dtpNgaySinh
             // 
@@ -335,6 +311,13 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(349, 110);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(62, 20);
+            this.txtGioiTinh.TabIndex = 3;
+            // 
             // frmMoSoTietKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,11 +361,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txLaiSuat;
         private System.Windows.Forms.TextBox txtSoTien;
-        private System.Windows.Forms.RadioButton radNu;
-        private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbKyHan;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ComboBox txtLoaiTien;
+        private System.Windows.Forms.TextBox txtGioiTinh;
     }
 }
