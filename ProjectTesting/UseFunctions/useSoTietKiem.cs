@@ -7,6 +7,7 @@ using ProjectTesting.Functions;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace ProjectTesting.UseFunctions
 {
@@ -17,12 +18,10 @@ namespace ProjectTesting.UseFunctions
         SqlConnection cnn;
         public DataTable getDataSoTietKiem()
         {
-            
-            //connection.open();
-    
+          
             try
             {
-                cnn = new SqlConnection();
+                cnn = new SqlConnection(str);
                 cnn.Open();
                 string sql = "SELECT * FROM SoTietKiem";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
@@ -32,15 +31,42 @@ namespace ProjectTesting.UseFunctions
                 da.Fill(dt);
                 return dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                
+                MessageBox.Show(ex.Message);
                 return null;
             }
             finally
             {
+               
                 cnn.Close();
                 cnn.Dispose();
             }
+           
+        }
+
+        public Boolean MaSTKLaNULL(string MaSTK)
+        {
+            if (MaSTK == "")
+                //MessageBox.Show("MaKH không được trống");
+                return true;
+            return false;
+        }
+        public Boolean SoTienGuiaNULL(string SoTien)
+        {
+            if (SoTien == "")
+                //MessageBox.Show("MaKH không được trống");
+                return true;
+            return false;
+        }
+
+        public Boolean TienLaiaNULL(string TienLai)
+        {
+            if (TienLai == "")
+                //MessageBox.Show("MaKH không được trống");
+                return true;
+            return false;
         }
     }
 }

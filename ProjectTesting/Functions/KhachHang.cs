@@ -60,8 +60,8 @@ namespace ProjectTesting.Functions
             set { _sdt = value; }
         }
 
-       
-       
+
+
         private string _quocTich;
 
         public string QuocTich
@@ -77,10 +77,12 @@ namespace ProjectTesting.Functions
             _maKH = MaKH;
             _hoKH = hoKH;
             _tenKH = tenKH;
+            _ngaySinh = Convert.ToDateTime(NgaySinh);
             _gioiTinh = GioiTinh;
             _sdt = sdt;
             _quocTich = QuocTich;
         }
+
     }
 }
 

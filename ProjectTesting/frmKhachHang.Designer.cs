@@ -55,7 +55,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(145, 147);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(174, 20);
-            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.TabIndex = 9;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // label1
@@ -77,7 +77,7 @@
             this.gridKhachHang.Name = "gridKhachHang";
             this.gridKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridKhachHang.Size = new System.Drawing.Size(560, 211);
-            this.gridKhachHang.TabIndex = 2;
+            this.gridKhachHang.TabIndex = 10;
             this.gridKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKhachHang_CellClick);
             // 
             // dtpNgaySinh
@@ -85,28 +85,28 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(345, 6);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(193, 20);
-            this.dtpNgaySinh.TabIndex = 16;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // txtQuocTich
             // 
             this.txtQuocTich.Location = new System.Drawing.Point(345, 67);
             this.txtQuocTich.Name = "txtQuocTich";
             this.txtQuocTich.Size = new System.Drawing.Size(193, 20);
-            this.txtQuocTich.TabIndex = 21;
+            this.txtQuocTich.TabIndex = 6;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(65, 66);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(193, 20);
-            this.txtSDT.TabIndex = 19;
+            this.txtSDT.TabIndex = 3;
             // 
             // txtHo
             // 
             this.txtHo.Location = new System.Drawing.Point(65, 40);
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(116, 20);
-            this.txtHo.TabIndex = 12;
+            this.txtHo.TabIndex = 1;
             // 
             // label7
             // 
@@ -158,7 +158,7 @@
             this.txtGioiTinh.Location = new System.Drawing.Point(345, 37);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(193, 20);
-            this.txtGioiTinh.TabIndex = 22;
+            this.txtGioiTinh.TabIndex = 5;
             // 
             // btnSua
             // 
@@ -167,7 +167,7 @@
             this.btnSua.Location = new System.Drawing.Point(144, 102);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
-            this.btnSua.TabIndex = 23;
+            this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -179,7 +179,7 @@
             this.btnReset.Location = new System.Drawing.Point(241, 102);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(78, 34);
-            this.btnReset.TabIndex = 23;
+            this.btnReset.TabIndex = 8;
             this.btnReset.Text = "Refresh";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -189,7 +189,7 @@
             this.txtTen.Location = new System.Drawing.Point(187, 41);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(71, 20);
-            this.txtTen.TabIndex = 24;
+            this.txtTen.TabIndex = 2;
             // 
             // label5
             // 
@@ -206,7 +206,7 @@
             this.txtMaKH.Location = new System.Drawing.Point(65, 10);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(193, 20);
-            this.txtMaKH.TabIndex = 26;
+            this.txtMaKH.TabIndex = 0;
             // 
             // frmKhachHang
             // 

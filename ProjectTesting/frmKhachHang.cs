@@ -30,17 +30,12 @@ namespace ProjectTesting
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(txtHo.Text ==""||txtTen.Text=="")
-            {
-                MessageBox.Show("Mời nhập đủ thông tin !", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
                 try
                 {
                     KhachHang kh = new KhachHang(txtMaKH.Text, txtHo.Text, txtTen.Text, dtpNgaySinh.Text, txtGioiTinh.Text, txtSDT.Text, txtQuocTich.Text);
                     useKhachHang suaKH = new useKhachHang();
                     suaKH.SuaKH(kh);
+                    gridKhachHang.DataSource = suaKH.loadKH();
                     MessageBox.Show("Sửa thành công!");
                 }
                 catch (Exception ex)
@@ -49,8 +44,6 @@ namespace ProjectTesting
                     MessageBox.Show(ex.Message);
                     //throw;
                 }
-            }
-           
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)

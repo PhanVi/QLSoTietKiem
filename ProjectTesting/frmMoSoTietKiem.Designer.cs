@@ -85,6 +85,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm thông tin khách hàng";
+
             // 
             // dtpNgaySinh
             // 
@@ -132,6 +133,7 @@
             // 
             // txtMaKH
             // 
+            this.txtMaKH.Enabled = false;
             this.txtMaKH.Location = new System.Drawing.Point(103, 36);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(170, 20);
@@ -295,6 +297,7 @@
             // 
             // txtMaSTK
             // 
+            this.txtMaSTK.Enabled = false;
             this.txtMaSTK.Location = new System.Drawing.Point(103, 32);
             this.txtMaSTK.Name = "txtMaSTK";
             this.txtMaSTK.Size = new System.Drawing.Size(133, 20);

@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
 using ProjectTesting.Functions;
 using ProjectTesting.UseFunctions;
 
@@ -16,6 +14,8 @@ namespace ProjectTesting
 {
     public partial class frmMoSoTietKiem : Form
     {
+        useKhachHang useKH = new useKhachHang();
+        useSoTietKiem useSTK = new useSoTietKiem();
         public frmMoSoTietKiem()
         {
             InitializeComponent();
@@ -23,25 +23,67 @@ namespace ProjectTesting
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            if (txtMaKH.Text == "" || txtMaSTK.Text == "" || txtHo.Text == "" || txtTen.Text == "" || txtSoTien.Text =="")
+            if (useKH.MaKHLaNULL(txtMaKH.Text) )
             {
-                MessageBox.Show("Mời nhập đủ thông tin !","Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (useKH.HoKHLaNULL(txtHo.Text) ==true)
+            {
+                MessageBox.Show("Họ Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useKH.TenKHLaNULL(txtTen.Text) == true)
+            {
+                MessageBox.Show("Tên Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useKH.SDTLaNULL(txtSDT.Text) == true)
+            {
+                MessageBox.Show("SDT Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useKH.QuocTichLaNULL(txtQuocTich.Text) == true)
+            {
+                MessageBox.Show("Họ Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useKH.GioiTinhLaNULL(txtGioiTinh.Text) == true)
+            {
+                MessageBox.Show("Giới tính Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (useSTK.MaSTKLaNULL(txtMaSTK.Text) == true)
+            {
+                MessageBox.Show("Mã số tiết kiệm không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useSTK.SoTienGuiaNULL(txtSoTien.Text) == true)
+            {
+                MessageBox.Show("Mời nhập số tiền gửi ban đầu!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (useSTK.TienLaiaNULL(txtLaiSuat.Text) == true)
+            {
+                MessageBox.Show("Mời nhập lãi suất ban đầu!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
             else
             {
                 try
                 {
                     KhachHang kh = new KhachHang(txtMaKH.Text, txtHo.Text, txtTen.Text, dtpNgaySinh.Text, txtGioiTinh.Text, txtSDT.Text, txtQuocTich.Text);
                     SoTietKiem stk = new SoTietKiem(txtMaSTK.Text, txtMaSTK.Text, txtSoTien.Text, txtLoaiTien.Text, txtLaiSuat.Text , cbKyHan.Text);
-                    useKhachHang useKH = new useKhachHang();
                     
-                    useSoTietKiem useSTK = new useSoTietKiem();
+                    
+                   
                     useKH.ThemKH(kh, stk);
 
                     gridThemMoiSTK.DataSource = useSTK.getDataSoTietKiem();
 
                     MessageBox.Show("Đăng ký thành công!");
                     init();
+                    //sinh ma kh
+                    SinhMaKH MaKhachHang = new SinhMaKH();
+                    txtMaKH.Text = MaKhachHang.SinhMaKHtu().ToString();
+
+                    //sinh ma sotietkiem
+                    SinhMaSTK MaSoTietKiem = new SinhMaSTK();
+                    txtMaSTK.Text = MaSoTietKiem.SinhMaSTKtu().ToString();
                 }
                 catch (Exception ex)
                 {
@@ -54,17 +96,14 @@ namespace ProjectTesting
         }
 
         private void init()
-        {
-            txtMaKH.Text = "";
+        {           
             txtHo.Text = "";
             txtTen.Text = "";
             txtSDT.Text = "";
             txtQuocTich.Text = "";
             dtpNgaySinh.Text = "";
             txtGioiTinh.Text = "";
-            txtMaSTK.Text = "";
             txtLaiSuat.Text = "";
-            txtLoaiTien.Text = "";
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -80,7 +119,15 @@ namespace ProjectTesting
         private void frmMoSoTietKiem_Load(object sender, EventArgs e)
         {
 
-            useSoTietKiem stk = new useSoTietKiem();            
+            //sinh ma kh
+            SinhMaKH MaKhachHang = new SinhMaKH();
+            txtMaKH.Text = MaKhachHang.SinhMaKHtu().ToString();
+
+            //sinh ma sotietkiem
+            SinhMaSTK MaSoTietKiem = new SinhMaSTK();
+            txtMaSTK.Text = MaSoTietKiem.SinhMaSTKtu().ToString();
+
+            useSoTietKiem stk = new useSoTietKiem();
             gridThemMoiSTK.DataSource = stk.getDataSoTietKiem();
         }
 
@@ -89,64 +136,6 @@ namespace ProjectTesting
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-
-
-
-
-        ///// <summary>
-        ///// sinh ma Khach hang
-        ///// </summary>
-        ///// <returns></returns>
-        //string SinhMaKH()
-        //{
-        //    SqlConnection cnn = connection.getConn();
-        //    connection.open(cnn);
-        //    string strMaKH = "";
-        //    try
-        //    {
-        //        string sql = "select count(*) from KhachHang";
-        //        SqlCommand cmd = new SqlCommand(sql, cnn);
-        //        int count = (int)cmd.ExecuteScalar();
-        //        init();
-        //        count++;
-        //        strMaKH = "KH" + count.ToString();
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    connection.close(cnn);
-        //    cnn.Dispose();
-        //    return strMaKH;
-        //}
-
-        ///// <summary>
-        ///// sinh ma so tiet kiem
-        ///// </summary>
-        ///// <returns></returns>
-        //string SinhMaSTK()
-        //{
-        //    SqlConnection cnn = connection.getConn();
-        //    connection.open(cnn);
-        //    string strMaSTK = "";
-        //    try
-        //    {
-        //        string sql = "select count(*) from SoTietKiem";
-        //        SqlCommand cmd = new SqlCommand(sql, cnn);
-        //        int count = (int)cmd.ExecuteScalar();
-        //        count++;
-        //        strMaSTK = "STK" + count.ToString();
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        connection.close(cnn);
-        //        cnn.Dispose();
-        //    }
-        //    return strMaSTK;
-        //}
+       
     }
 }
