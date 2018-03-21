@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using ProjectTesting.Functions;
+using ProjectTesting.UseFunctions;
 
 namespace ProjectTesting
 {
@@ -22,20 +23,34 @@ namespace ProjectTesting
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            try
+            if (txtMaKH.Text == "" || txtMaSTK.Text == "" || txtHo.Text == "" || txtTen.Text == "" || txtSoTien.Text =="")
             {
+                MessageBox.Show("Mời nhập đủ thông tin !","Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    KhachHang kh = new KhachHang(txtMaKH.Text, txtHo.Text, txtTen.Text, dtpNgaySinh.Text, txtGioiTinh.Text, txtSDT.Text, txtQuocTich.Text);
+                    SoTietKiem stk = new SoTietKiem(txtMaSTK.Text, txtMaSTK.Text, txtSoTien.Text, txtLoaiTien.Text, txtLaiSuat.Text , cbKyHan.Text);
+                    useKhachHang useKH = new useKhachHang();
+                    
+                    useSoTietKiem useSTK = new useSoTietKiem();
+                    useKH.ThemKH(kh, stk);
 
-                KhachHang kh = new KhachHang(txtMaKH.Text, txtHo.Text, txtTen.Text, dtpNgaySinh.Text, txtGioiTinh.Text, txtSDT.Text, txtQuocTich.Text);
-                MessageBox.Show("Đăng ký thành công!");
-                init();
-              
+                    gridThemMoiSTK.DataSource = useSTK.getDataSoTietKiem();
+
+                    MessageBox.Show("Đăng ký thành công!");
+                    init();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //throw;
+                }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
-            
+
         }
 
         private void init()
@@ -46,6 +61,10 @@ namespace ProjectTesting
             txtSDT.Text = "";
             txtQuocTich.Text = "";
             dtpNgaySinh.Text = "";
+            txtGioiTinh.Text = "";
+            txtMaSTK.Text = "";
+            txtLaiSuat.Text = "";
+            txtLoaiTien.Text = "";
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -57,5 +76,77 @@ namespace ProjectTesting
                 this.Close();
             }           
         }
+
+        private void frmMoSoTietKiem_Load(object sender, EventArgs e)
+        {
+
+            useSoTietKiem stk = new useSoTietKiem();            
+            gridThemMoiSTK.DataSource = stk.getDataSoTietKiem();
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+
+
+
+        ///// <summary>
+        ///// sinh ma Khach hang
+        ///// </summary>
+        ///// <returns></returns>
+        //string SinhMaKH()
+        //{
+        //    SqlConnection cnn = connection.getConn();
+        //    connection.open(cnn);
+        //    string strMaKH = "";
+        //    try
+        //    {
+        //        string sql = "select count(*) from KhachHang";
+        //        SqlCommand cmd = new SqlCommand(sql, cnn);
+        //        int count = (int)cmd.ExecuteScalar();
+        //        init();
+        //        count++;
+        //        strMaKH = "KH" + count.ToString();
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    connection.close(cnn);
+        //    cnn.Dispose();
+        //    return strMaKH;
+        //}
+
+        ///// <summary>
+        ///// sinh ma so tiet kiem
+        ///// </summary>
+        ///// <returns></returns>
+        //string SinhMaSTK()
+        //{
+        //    SqlConnection cnn = connection.getConn();
+        //    connection.open(cnn);
+        //    string strMaSTK = "";
+        //    try
+        //    {
+        //        string sql = "select count(*) from SoTietKiem";
+        //        SqlCommand cmd = new SqlCommand(sql, cnn);
+        //        int count = (int)cmd.ExecuteScalar();
+        //        count++;
+        //        strMaSTK = "STK" + count.ToString();
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        connection.close(cnn);
+        //        cnn.Dispose();
+        //    }
+        //    return strMaSTK;
+        //}
     }
 }

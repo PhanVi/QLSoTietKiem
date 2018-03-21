@@ -9,104 +9,48 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using ProjectTesting.UseFunctions;
+using ProjectTesting.Functions;
 
 namespace ProjectTesting
 {
     public partial class frmKhachHang : Form
     {
-        SqlConnection cnn;
         public frmKhachHang()
         {
             InitializeComponent();
         }
-        private void LoadKH()
-        {
-            try
-            {
-                string str = ConfigurationManager.ConnectionStrings["str"].ConnectionString;
-                cnn = new SqlConnection(str);
-
-                cnn.Open();
-                string sql = "select * from KhachHang ";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                cmd.Dispose();
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                gridKhachHang.DataSource = table;
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
-        }
-
+       
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
 
-            LoadKH();
+            useKhachHang kh = new useKhachHang();
+            gridKhachHang.DataSource = kh.loadKH();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            if(txtHo.Text ==""||txtTen.Text=="")
             {
-                string str = ConfigurationManager.ConnectionStrings["str"].ConnectionString;
-                cnn = new SqlConnection(str);
-
-                cnn.Open();
-                string sql = "update KhachHang set HoKH = N'" + txtHo.Text + "', TenKH = N'" + txtTen.Text + "', SDT = '"+txtSDT.Text+"', NgaySinh = N'"+ 
-                    dtpNgaySinh.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' where MaKH = '"+txtMaKH.Text+"'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                cmd.Dispose();
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                gridKhachHang.DataSource = table;
-                LoadKH();
-                MessageBox.Show("Cập nhật thành công!");
-                cnn.Close();
+                MessageBox.Show("Mời nhập đủ thông tin !", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
+                try
+                {
+                    KhachHang kh = new KhachHang(txtMaKH.Text, txtHo.Text, txtTen.Text, dtpNgaySinh.Text, txtGioiTinh.Text, txtSDT.Text, txtQuocTich.Text);
+                    useKhachHang suaKH = new useKhachHang();
+                    suaKH.SuaKH(kh);
+                    MessageBox.Show("Sửa thành công!");
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message);
-                //throw;
+                    MessageBox.Show(ex.Message);
+                    //throw;
+                }
             }
-        }
-
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string str = ConfigurationManager.ConnectionStrings["str"].ConnectionString;
-                cnn = new SqlConnection(str);
-
-                cnn.Open();
-                string sql = "delete from KhachHang where MaKH = N'"+txtMaKH.Text+"' ";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                cmd.Dispose();
-                string sql2 = "delete from SoTietKiem where MaKH = N'" + txtMaKH.Text + "' ";
-                cmd = new SqlCommand(sql2, cnn);
-                adapter = new SqlDataAdapter(cmd);
-                cmd.Dispose();
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                gridKhachHang.DataSource = table;
-                LoadKH();
-                MessageBox.Show("Xóa thành công!");
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
+           
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
