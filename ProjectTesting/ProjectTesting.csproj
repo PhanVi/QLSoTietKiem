@@ -77,12 +77,18 @@
       <DependentUpon>frmPhieuRut.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions\KhachHang.cs" />
+    <Compile Include="Functions\PhieuGui.cs" />
+    <Compile Include="Functions\PhieuRut.cs" />
     <Compile Include="Functions\SoTietKiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseFunctions\SinhMaKH.cs" />
+    <Compile Include="UseFunctions\SinhMaPhieuGui.cs" />
     <Compile Include="UseFunctions\SinhMaSTK.cs" />
+    <Compile Include="UseFunctions\SinhPhieuRut.cs" />
     <Compile Include="UseFunctions\useKhachHang.cs" />
+    <Compile Include="UseFunctions\usePhieuGui.cs" />
+    <Compile Include="UseFunctions\usePhieuRut.cs" />
     <Compile Include="UseFunctions\useSoTietKiem.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

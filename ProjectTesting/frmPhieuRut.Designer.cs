@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridPhieuRut = new System.Windows.Forms.DataGridView();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridPhieuRut)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.OrangeRed;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(210, 179);
+            this.btnRefresh.Location = new System.Drawing.Point(330, 179);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(103, 36);
             this.btnRefresh.TabIndex = 10;
@@ -112,6 +113,7 @@
             // 
             // txtMaPhieuRut
             // 
+            this.txtMaPhieuRut.Enabled = false;
             this.txtMaPhieuRut.Location = new System.Drawing.Point(118, 14);
             this.txtMaPhieuRut.Name = "txtMaPhieuRut";
             this.txtMaPhieuRut.Size = new System.Drawing.Size(195, 20);
@@ -168,8 +170,22 @@
             this.gridPhieuRut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridPhieuRut.Location = new System.Drawing.Point(0, 221);
             this.gridPhieuRut.Name = "gridPhieuRut";
+            this.gridPhieuRut.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPhieuRut.Size = new System.Drawing.Size(549, 126);
             this.gridPhieuRut.TabIndex = 11;
+            this.gridPhieuRut.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuRut_CellClick);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(210, 179);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(92, 36);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // frmPhieuRut
             // 
@@ -178,6 +194,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(549, 347);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.gridPhieuRut);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnThem);
@@ -195,6 +212,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhieuRut";
             this.Text = "Phiếu rút tiền";
+            this.Load += new System.EventHandler(this.frmPhieuRut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPhieuRut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,5 +235,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridPhieuRut;
+        private System.Windows.Forms.Button btnXoa;
     }
 }

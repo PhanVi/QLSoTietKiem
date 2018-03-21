@@ -9,67 +9,57 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using ProjectTesting.Functions;
+using ProjectTesting.UseFunctions;
 
 namespace ProjectTesting
 {
     public partial class frmPhieuGui : Form
     {
-        SqlConnection cnn;
+        usePhieuGui usePhieugui = new usePhieuGui();
         public frmPhieuGui()
         {
             InitializeComponent();
         }
 
 
-        private void LoadPhieuGui()
-        {
-            try
-            {
-                string str = ConfigurationManager.ConnectionStrings["str"].ConnectionString;
-                cnn = new SqlConnection(str);
-
-                cnn.Open();
-                string sql = "select * from PhieuGoiTien ";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                cmd.Dispose();
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                gridPhieuGui.DataSource = table;
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
-        }
+        
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+           
+
+            //bắt đk
+            if (usePhieugui.MaSTKLaNULL(txtMaSTK.Text))
             {
-                string str = ConfigurationManager.ConnectionStrings["str"].ConnectionString;
-                cnn = new SqlConnection(str);
-
-                cnn.Open();
-
-                string sql = "insert into PhieuGoiTien values (N'"+txtMaPhieuGui.Text+"', N'"+txtMaSTK.Text+"', N'"+
-                    txtMaKH.Text+"', '"+dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") +"', N'"+txtSoTienGui.Text+"') ";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm thành công!");
-                init();
-                LoadPhieuGui();
-
-                cnn.Close();
+                MessageBox.Show("Mã Sổ tiết kiệm không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else if (usePhieugui.MaKHLaNULL(txtMaKH.Text))
             {
-                MessageBox.Show(ex.Message);
-                //throw;
+                MessageBox.Show("Mã khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            else if (usePhieugui.SoTienGuiLaNULL(txtSoTienGui.Text))
+            {
+                MessageBox.Show("số tiền gửi không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    
+                    PhieuGui pg = new PhieuGui(txtMaPhieuGui.Text, txtMaSTK.Text, txtMaKH.Text, dateTimePicker1.Text, txtSoTienGui.Text);
+                    usePhieugui.ThemPhieuGui(pg);
+                    init();
+                    gridPhieuGui.DataSource = usePhieugui.loadPhieuGui();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //throw;
+                }
+            }
+           
         }
         private void init()
         {
@@ -78,9 +68,71 @@ namespace ProjectTesting
             txtMaSTK.Text = "";
             txtSoTienGui.Text = "";
         }
+
+        private void frmPhieuGui_Load(object sender, EventArgs e)
+        {
+            //sinh ma phieugui
+            SinhMaPhieuGui MaPhieugui = new SinhMaPhieuGui();
+            txtMaPhieuGui.Text = MaPhieugui.SinhMaPhieuGuitu().ToString();
+
+            gridPhieuGui.DataSource = usePhieugui.loadPhieuGui();
+        }
+
+
+        /// <summary>
+        /// txtSoTe=ienGui khong cho nhập chữ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtSoTienGui_KeyUp(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        /// <summary>
+        /// hiển thị dữ liệu từ grid lên textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridPhieuGui_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = gridPhieuGui.Rows[e.RowIndex];
+                txtMaPhieuGui.Text = row.Cells["MaPhieuGoi"].Value.ToString();
+                txtMaSTK.Text = row.Cells["MaSTK"].Value.ToString();
+                txtMaKH.Text = row.Cells["MaKH"].Value.ToString();
+                dateTimePicker1.Text = row.Cells["ThoiGianGoiTien"].Value.ToString();
+                txtSoTienGui.Text = row.Cells["SoTienGoi"].Value.ToString();
+            }
+        }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            //sinh ma phieugui
+            
             init();
+            SinhMaPhieuGui MaPhieugui = new SinhMaPhieuGui();
+            txtMaPhieuGui.Text = MaPhieugui.SinhMaPhieuGuitu().ToString();
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PhieuGui pg = new PhieuGui(txtMaPhieuGui.Text, txtMaSTK.Text, txtMaKH.Text, dateTimePicker1.Text, txtSoTienGui.Text);
+                usePhieugui.XoaPhieuGui(pg);
+                init();
+                gridPhieuGui.DataSource = usePhieugui.loadPhieuGui();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }
         }
     }
 }

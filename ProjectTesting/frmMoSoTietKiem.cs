@@ -23,6 +23,7 @@ namespace ProjectTesting
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            
             if (useKH.MaKHLaNULL(txtMaKH.Text) )
             {
                 MessageBox.Show("Mã Khách hàng không được trống!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);

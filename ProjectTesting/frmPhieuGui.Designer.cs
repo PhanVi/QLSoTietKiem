@@ -42,6 +42,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridPhieuGui)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +53,10 @@
             this.gridPhieuGui.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridPhieuGui.Location = new System.Drawing.Point(0, 226);
             this.gridPhieuGui.Name = "gridPhieuGui";
+            this.gridPhieuGui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPhieuGui.Size = new System.Drawing.Size(534, 150);
             this.gridPhieuGui.TabIndex = 8;
+            this.gridPhieuGui.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuGui_CellClick);
             // 
             // label1
             // 
@@ -84,6 +87,7 @@
             // 
             // txtMaPhieuGui
             // 
+            this.txtMaPhieuGui.Enabled = false;
             this.txtMaPhieuGui.Location = new System.Drawing.Point(114, 19);
             this.txtMaPhieuGui.Name = "txtMaPhieuGui";
             this.txtMaPhieuGui.Size = new System.Drawing.Size(195, 20);
@@ -151,7 +155,7 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.OrangeRed;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(77, 184);
+            this.btnThem.Location = new System.Drawing.Point(40, 184);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(103, 36);
             this.btnThem.TabIndex = 6;
@@ -159,11 +163,23 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(163, 184);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(103, 36);
+            this.btnXoa.TabIndex = 7;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.OrangeRed;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(206, 184);
+            this.btnRefresh.Location = new System.Drawing.Point(292, 184);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(103, 36);
             this.btnRefresh.TabIndex = 7;
@@ -179,6 +195,7 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(534, 376);
             this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox1);
@@ -195,6 +212,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhieuGui";
             this.Text = "Phiếu gửi";
+            this.Load += new System.EventHandler(this.frmPhieuGui_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPhieuGui)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,6 +234,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnRefresh;
     }
 }
