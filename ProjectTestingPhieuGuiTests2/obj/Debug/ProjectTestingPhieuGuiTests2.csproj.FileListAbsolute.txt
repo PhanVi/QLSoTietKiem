@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\ProjectTestingPhieuGuiTests2.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\ProjectTestingPhieuGuiTests2.pdb
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\ProjectTesting.exe
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\ProjectTesting.pdb
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\obj\Debug\ProjectTestingPhieuGuiTests2.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\obj\Debug\ProjectTestingPhieuGuiTests2.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\ProjectTestingPhieuGuiTests2\obj\Debug\ProjectTestingPhieuGuiTests2.pdb

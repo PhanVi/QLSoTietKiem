@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\QuanLySoTietKiemTester.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\QuanLySoTietKiemTester.pdb
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\ProjectTesting.exe
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\ProjectTesting.pdb
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\obj\Debug\QuanLySoTietKiemTester.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\obj\Debug\QuanLySoTietKiemTester.dll
+C:\Users\Admin\Desktop\New folder\QLSoTietKiem\QuanLySoTietKiemTester\obj\Debug\QuanLySoTietKiemTester.pdb

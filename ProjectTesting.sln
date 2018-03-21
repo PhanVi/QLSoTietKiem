@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTesting", "ProjectTesting\ProjectTesting.csproj", "{1E3F3158-360A-43DC-8F6E-4B2590829C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTestingKhachHangTests", "ProjectTestingKhachHangTests\ProjectTestingKhachHangTests.csproj", "{39AEF6E7-7BAF-4F3F-91F7-08BEC4FBD548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTestingPhieuGuiTests2", "ProjectTestingPhieuGuiTests2\ProjectTestingPhieuGuiTests2.csproj", "{5BF8E808-78C6-4A03-A639-030EC5DC0E48}"
+EndProject
 Global
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
@@ -18,6 +22,14 @@ Global
 		{1E3F3158-360A-43DC-8F6E-4B2590829C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E3F3158-360A-43DC-8F6E-4B2590829C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E3F3158-360A-43DC-8F6E-4B2590829C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39AEF6E7-7BAF-4F3F-91F7-08BEC4FBD548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AEF6E7-7BAF-4F3F-91F7-08BEC4FBD548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AEF6E7-7BAF-4F3F-91F7-08BEC4FBD548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AEF6E7-7BAF-4F3F-91F7-08BEC4FBD548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF8E808-78C6-4A03-A639-030EC5DC0E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF8E808-78C6-4A03-A639-030EC5DC0E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF8E808-78C6-4A03-A639-030EC5DC0E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF8E808-78C6-4A03-A639-030EC5DC0E48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
